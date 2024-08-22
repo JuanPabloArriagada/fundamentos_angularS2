@@ -1,11 +1,5 @@
 <ul>
-    <li>
-        <a href="">Home</a>
-    </li>
-    <li>
-        <a href="">Contacto</a>
-    </li>
-    <li>
-        <a href="">Ayuda</a>
+    <li *ngFor="let ruta of rutas">
+        <a href="" [routerLink]="ruta.destino">{{ruta.nombre}}</a> 
     </li>
 </ul>

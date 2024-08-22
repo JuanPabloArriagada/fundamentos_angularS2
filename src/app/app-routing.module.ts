@@ -4,6 +4,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AyudaComponent } from './pages/ayuda/ayuda.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { QuienesComponent } from './pages/quienes/quienes.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'ayuda',
     component:AyudaComponent
+  },
+  {
+    path:'quienes',
+    component:QuienesComponent
   },
   {
     path:'**',/* sirve para cualquier cosa, por ejemplo cuando no encutrar la pagina o SI la encuentra, debe ir abajo */ /* la app va de 1 en 1 buscando hacia abajo */
