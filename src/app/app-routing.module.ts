@@ -3,8 +3,13 @@ import { RouterModule/* raiz del sitio */, Routes/* rutas */ } from '@angular/ro
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AyudaComponent } from './pages/ayuda/ayuda.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
+  {
+    path:'', /* Si no pone nada por defecto llega al home */
+    component:HomeComponent
+  },
   {
     path:'home',
     component:HomeComponent
@@ -16,6 +21,10 @@ const routes: Routes = [
   {
     path:'ayuda',
     component:AyudaComponent
+  },
+  {
+    path:'**',/* sirve para cualquier cosa, por ejemplo cuando no encutrar la pagina o SI la encuentra, debe ir abajo */ /* la app va de 1 en 1 buscando hacia abajo */
+    component:NotfoundComponent
   },
 ];
 
